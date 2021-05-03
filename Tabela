@@ -1,0 +1,87 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 03/05/2021 às 17:51
+-- Versão do servidor: 8.0.21
+-- Versão do PHP: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `livros`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `livros`
+--
+
+CREATE TABLE `livros` (
+  `livros_id` int NOT NULL,
+  `nome` varchar(50) DEFAULT NULL,
+  `genero` varchar(50) DEFAULT NULL,
+  `data_de_compra` date DEFAULT NULL,
+  `numero_de_paginas` int DEFAULT NULL,
+  `valor` int DEFAULT NULL,
+  `ja_comprei` varchar(50) DEFAULT NULL,
+  `autor` varchar(20) DEFAULT NULL,
+  `editora` varchar(50) DEFAULT NULL,
+  `data_de_publicacao` date DEFAULT NULL,
+  `rating` varchar(50) DEFAULT NULL,
+  `endereco_do_autor` varchar(50) DEFAULT NULL,
+  `data_de_nascimento_do_autor` date DEFAULT NULL,
+  `pais_de_origem` varchar(50) DEFAULT NULL,
+  `telefone_da_editora` int DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `livros`
+--
+
+INSERT INTO `livros` (`livros_id`, `nome`, `genero`, `data_de_compra`, `numero_de_paginas`, `valor`, `ja_comprei`, `autor`, `editora`, `data_de_publicacao`, `rating`, `endereco_do_autor`, `data_de_nascimento_do_autor`, `pais_de_origem`, `telefone_da_editora`) VALUES
+(1, 'Harry Potter e a Pedra Filosofal', 'Fantasia', '2005-03-02', 368, 20, 'Sim', 'J.K Rowling', 'Rocco', '2007-03-02', 'Muito bom', '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 20289657),
+(2, 'Harry Potter e o Prisioneiro de Azkaban', 'Fantasia', '2005-04-02', 598, 18, 'Comprei', 'J.K Rowling', 'Rocco', '2012-04-02', 'Gostei', '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 20243682),
+(3, 'Harry Potter e a Ordem da Fênix', 'Fantasia', '2022-01-04', 798, 50, 'Não', 'J.K Rowling,Rocco', '08/02/2005', '2005-08-20', '3227', 'Fairmont Avenue', '1971-08-14', 'Inglaterra', 20298557),
+(4, 'Harry Potter e a Câmara Secreta', 'Fantasia', '2005-06-02', 328, 15, 'Não', 'J.K Rowling', 'Rocco', '2009-12-10', 'Não gostei', '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 20226537),
+(5, 'Garota Exemplar', 'Suspense', '2005-06-02', 128, 60, 'Não', 'Gillian Flynn', 'Intrinseca', '2005-11-10', 'Fraco', '2103  Randall Drive', '2016-03-01', 'Estados Unidos', 20276546),
+(6, 'Diálogos Impossíveis', 'Comédia', '2003-08-02', 208, 10, 'Não comprei', 'Veríssimo', 'Lero-Lero', '2005-03-02', 'Gostei', 'Rocky Mount, 27801', '2010-09-23', 'Brasil', 20298765),
+(7, 'Harry Potter e o Prisioneiro de Azkaban', 'Fantasia', '2005-03-02', 368, 20, 'Comprei', 'Neil Gaiman', 'Rocco', '2020-03-02', 'Muito bom', 'Cut And Shoot, 77301', '2006-06-28', 'Inglaterra', 20276489),
+(8, 'Arafat', 'Suspense', '2013-10-23', 158, 17, 'Sim', 'Clive Baker', 'Editora Dark Sense', '2014-05-18', 'Gostei', '2496 Rose Avenue', '1983-08-16', 'Estados Unidos', 20236798),
+(9, 'Este não é mais um livro de dieta', 'Auto-Ajuda', '2020-11-28', 988, 9, 'Sim', 'Rodrigo Polesso', 'Editora Gente', '2021-08-28', 'Maravilhoso', '3788 Wetzel Lane', '1968-11-27', 'Brasil', 20234536),
+(10, 'Atenção Plena: Mindfulness', 'Ficção Científica', '2018-08-28', 122, 20, 'Não comprei', 'Ruy Ohtake', 'Instituto Tomie Ohtake', '2019-08-28', 'não gostei', '2710 Bobcat Drive', '1984-09-29', 'Brasil', 20232087);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `livros`
+--
+ALTER TABLE `livros`
+  ADD PRIMARY KEY (`livros_id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `livros`
+--
+ALTER TABLE `livros`
+  MODIFY `livros_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
